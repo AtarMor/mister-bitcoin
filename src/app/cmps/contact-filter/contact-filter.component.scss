@@ -1,0 +1,11 @@
+.contact-filter {
+    display: grid;
+    margin-block: 20px 10px;
+
+    input {
+        border: 1px solid lightgray;
+        border-radius: 4px;
+        padding: 0.4em 0.6em;
+        margin-inline: 20px;
+    }
+}

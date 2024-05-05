@@ -1,4 +1,6 @@
 <section class="contacts">
-    <button routerLink="/edit">+</button>
+    <button class="add-contact-btn" routerLink="/edit">
+        <img src="/assets/img/plus.png" alt="plus"/>
+    </button>
     <contact-list [contacts]="contacts$ | async"></contact-list>
 </section>
