@@ -8,13 +8,11 @@ import { ContactEditPageComponent } from './pages/contact-edit-page/contact-edit
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
-  {
-    path: 'contact', component: ContactPageComponent, children: [
-      { path: 'edit', component: ContactEditPageComponent },
-      { path: 'edit/:id', component: ContactEditPageComponent, resolve: { contact: contactResolver } }
-    ]
-  },
-  { path: 'contact/:id', component: ContactDetailsPageComponent, resolve: { contact: contactResolver } }
+  { path: 'contact', component: ContactPageComponent },
+  { path: 'edit', component: ContactEditPageComponent },
+  { path: 'edit/:id', component: ContactEditPageComponent, resolve: { contact: contactResolver } },
+  { path: 'contact/:id', component: ContactDetailsPageComponent, resolve: { contact: contactResolver } },
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
 ];
 
 @NgModule({

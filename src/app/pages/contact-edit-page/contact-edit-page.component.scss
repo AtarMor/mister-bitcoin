@@ -1,0 +1,19 @@
+.edit-contact {
+    max-width: 400px;
+    .contact-img {
+        height: 70px;
+    }
+    form {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 10px;
+    }
+
+    .save-btn {
+        justify-self: end;
+    }
+
+    .back-btn {
+        justify-self: start;
+    }
+}
