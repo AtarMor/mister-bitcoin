@@ -1,6 +1,15 @@
 <section class="edit-contact">
+    <div class="btn-container">
+        <button class="back-btn" routerLink="/contact" type="button">
+            <img src="/assets/img/back.png"/>
+        </button>
+        <button>
+            <img src="/assets/img/delete.png" alt="delete"/>
+        </button>
+    </div>
     <img class="contact-img" src="/assets/img/female-contact.svg" alt="contact" />
     <form (ngSubmit)="onSaveContact()">
+
         <label for="name">Name</label>
         <input [(ngModel)]="contact.name" type="text" name="name" id="name" />
 
@@ -10,7 +19,6 @@
         <label for="email">Email</label>
         <input [(ngModel)]="contact.email" type="email" name="email" id="email" />
 
-        <button class="back-btn" routerLink="/contact" type="button">Back</button>
         <button class="save-btn">Save</button>
     </form>
 </section>

@@ -1,19 +1,47 @@
 .edit-contact {
+    display: grid;
+    gap: 10px;
     max-width: 400px;
+    margin-inline: auto;
+
+    .btn-container {
+        display: flex;
+        justify-content: space-between;
+        padding-block: 10px;
+
+        img {
+            height: 30px;
+        }
+    }
+
     .contact-img {
         height: 70px;
     }
+
     form {
         display: grid;
-        grid-template-columns: auto auto;
+        align-items: center;
+        grid-template-columns: auto 1fr;
         gap: 10px;
+        margin-block: 20px;
+
+        input {
+            border: 1px solid lightgray;
+            border-radius: 4px;
+            padding: 0.4em 0.6em;
+        }
     }
 
     .save-btn {
+        grid-column: 2;
         justify-self: end;
-    }
+        border: 1px solid lightgray;
+        border-radius: 4px;
+        padding: 0.2em 0.6em;
 
-    .back-btn {
-        justify-self: start;
+        &:hover {
+            background-color: lightgray;
+        }
+
     }
 }

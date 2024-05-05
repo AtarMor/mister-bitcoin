@@ -1,4 +1,13 @@
 .contact-details {
+    .btn-container {
+        display: flex;
+        justify-content: space-between;
+        padding-block: 1em;
+
+        img {
+            height: 30px;
+        }
+    }
     .contact-img {
         height: 100px;
     }
