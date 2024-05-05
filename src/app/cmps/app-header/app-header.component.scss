@@ -1,0 +1,13 @@
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-bottom: 2px solid lightgray;
+
+    a {
+        .home-icon {
+            height: 45px;
+        }
+    }
+}
