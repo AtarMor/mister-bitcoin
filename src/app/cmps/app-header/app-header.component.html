@@ -1,7 +1,10 @@
 <nav>
-    <a routerLink="/home" routerLinkActive="active">
+    <a *ngIf="user$" routerLink="/home" routerLinkActive="active">
         <img class="home-icon" src="/assets/img/home.png"/>
     </a>
+    <!-- <a *ngIf="!user$" routerLink="/signup" routerLinkActive="active">
+        <img class="home-icon" src="/assets/img/home.png"/>
+    </a> -->
     <a routerLink="/contact" routerLinkActive="active">
         <img class="contact-icon" src="/assets/img/users.png"/>
     </a>

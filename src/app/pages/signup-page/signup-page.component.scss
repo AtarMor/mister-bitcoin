@@ -1,0 +1,27 @@
+.signup-page {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 2em;
+
+    img {
+        margin-inline: auto;
+    }
+
+    .signup-form {
+        display: grid;
+        gap: 20px;
+
+        button {
+            justify-self: center;
+            border: 1px solid lightgray;
+            border-radius: 4px;
+            padding: 0.2em 0.6em;
+
+            &:hover {
+                background-color: lightgray;
+            }
+        }
+    }
+}

@@ -1,6 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { ContactService } from './services/contact.service';
 import { take } from 'rxjs';
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +10,6 @@ import { take } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   title = 'mister-bitcoin';
-
   private contactService = inject(ContactService)
 
   ngOnInit(): void {

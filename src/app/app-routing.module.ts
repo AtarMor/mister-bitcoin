@@ -5,13 +5,24 @@ import { ContactPageComponent } from './pages/contact-page/contact-page.componen
 import { ContactDetailsPageComponent } from './pages/contact-details-page/contact-details-page.component';
 import { contactResolver } from './resolvers/contact.resolver';
 import { ContactEditPageComponent } from './pages/contact-edit-page/contact-edit-page.component';
+import { SignupPageComponent } from './pages/signup-page/signup-page.component';
+import { authGuard } from './gurdes/auth.guard';
 
 const routes: Routes = [
-  { path: 'home', component: HomePageComponent },
-  { path: 'contact', component: ContactPageComponent },
-  { path: 'edit', component: ContactEditPageComponent },
-  { path: 'edit/:id', component: ContactEditPageComponent, resolve: { contact: contactResolver } },
-  { path: 'contact/:id', component: ContactDetailsPageComponent, resolve: { contact: contactResolver } },
+  { path: 'home', component: HomePageComponent, canActivate: [authGuard] },
+  { path: 'signup', component: SignupPageComponent },
+  { path: 'contact', component: ContactPageComponent, canActivate: [authGuard], },
+  { path: 'edit', component: ContactEditPageComponent, canActivate: [authGuard] },
+  {
+    path: 'edit/:id', component: ContactEditPageComponent,
+    canActivate: [authGuard],
+    resolve: { contact: contactResolver }
+  },
+  {
+    path: 'contact/:id', component: ContactDetailsPageComponent,
+    canActivate: [authGuard],
+    resolve: { contact: contactResolver }
+  },
   { path: '', pathMatch: 'full', redirectTo: 'home' },
 ];
 

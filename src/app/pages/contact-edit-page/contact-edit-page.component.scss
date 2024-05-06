@@ -1,8 +1,6 @@
 .edit-contact {
     display: grid;
     gap: 10px;
-    max-width: 400px;
-    margin-inline: auto;
 
     .btn-container {
         display: flex;
@@ -15,7 +13,7 @@
     }
 
     .contact-img {
-        height: 70px;
+        height: 80px;
     }
 
     form {

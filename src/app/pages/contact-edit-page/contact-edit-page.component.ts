@@ -26,7 +26,6 @@ export class ContactEditPageComponent implements OnInit{
   }
 
   onSaveContact() {
-    console.log('this.contact',this.contact)
       this.contactService.saveContact(this.contact as Contact)
           .subscribe({
               next: () => this.router.navigateByUrl('/contact'),

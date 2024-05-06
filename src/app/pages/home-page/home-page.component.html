@@ -1,4 +1,4 @@
-<section class="user-details">
+<section *ngIf="user" class="user-details">
     <h1>Hello {{user.name}}!</h1>
     <div class="row coins">
         <img src="/assets/img/coins.png" alt="coins"/>
@@ -8,4 +8,5 @@
         <img src="/assets/img/bitcoin.png" alt="bitcoin"/>
         <h2>BTC: {{rate | async}}</h2>
     </div>
+    <button class="logout-btn" (click)="onLogout()">Log out</button>
 </section>
